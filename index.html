@@ -1,0 +1,715 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        body {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .office-heading,
+        .heading-info,
+        .heading-analysis,
+        .heading-content,
+        .heading-website-design,
+        .heading-seo,
+        .heading-competitors,
+        .heading-social-media,
+        .heading-branding-design,
+        .heading-other-info {
+            color: rgb(109, 161, 31);
+        }
+
+        .field-mandotary {
+            color: rgb(206, 10, 10);
+        }
+
+        input.my-5.btn-submit {
+            padding: 0.5em 1.9em;
+            background: #5dd35d;
+            border: 1px solid #277c27;
+            font-size: 22px;
+        }
+
+        #redesign,
+        #new-website,
+        #ongoing-design,
+        #duplicate-design,
+        #photography-yes,
+        #content-yes,
+        #social-media-yes-wrppr,
+        #social-media-no-wrppr,
+        #current-marketing-yes-wrrpr,
+        #company-logo-yes-wrrpr {
+            display: none;
+        }
+
+        .trasition {
+            transition: 0.2s;
+        }
+
+        .lineHeight {
+            line-height: 32px;
+        }
+
+        #textareaStyle {
+            width: 100%;
+            height: 4%;
+        }
+
+        .select-file {
+            display: inline-block;
+            background-color: rgb(70, 173, 70);
+            color: white;
+            padding: 1rem;
+            font-family: sans-serif;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        @media only screen and (max-width: 520px){
+            .main-office-info-wrppr{
+                display: none;
+            }
+            #textareaStyle {
+            width: 100%;
+            height: 3%;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center px-md-5 px-sm-1 pt-5">
+            <div class="col-md-6 w-25 main-office-info-wrppr">
+                <div>
+                    <h4 class="office-heading">Main Office</h4>
+                    <hr>
+                </div>
+                <div>
+                    <p><b>Address</b></p>
+                    <p>15762 W 70th Drive<br>
+                        Arvada, CO 80007</p>
+                </div>
+                <div>
+                    <p><b>Email</b></p>
+                    <p>info@aspireid.com</p>
+                </div>
+                <div>
+                    <p><b>Phone</b></p>
+                    <p>(303) 940 2537</p>
+                </div>
+            </div>
+            <div class="col-md-6 w-75">
+                <div>
+                    <h4 class="heading-analysis">Need Analysis Form</h4>
+                    <hr>
+                </div>
+                <div>
+                    <h5 class="heading-info mb-5">General Info</h5>
+                    <p>Thank you for your interest in Aspire ID! Please complete the following Needs Analysis form
+                        to receive a website design and online presence building quote for your company or
+                        organization. If you have any questions, please contact us at (303) 940-2537 or via email at
+                        info@aspireid.com.</p>
+                </div>
+
+
+                <form action="#">
+
+                    <div class="contact-detail">
+                        <div class="mb-4">
+                            <label for="name" class="mb-3">Name</label>
+                            <span class="field-mandotary">*</span>
+                            <br>
+                            <input type="text" class="w-100" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="ompany" class="mb-3">Company or Organization</label>
+                            <span class="field-mandotary">*</span>
+                            <br>
+                            <input type="text" class="w-100" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="mb-3">Contact Email</label>
+                            <span class="field-mandotary">*</span>
+                            <br>
+                            <input type="text" class="w-100" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="mb-3">Contact Phone</label>
+                            <span class="field-mandotary">*</span>
+                            <br>
+                            <input type="text" class="w-100" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="address" class="mb-3">Address</label>
+                            <span class="field-mandotary">*</span>
+                            <br>
+                            <input type="text" class="w-100" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="industry" class="mb-3">Industry</label>
+                            <span class="field-mandotary">*</span>
+                            <br>
+                            <input type="text" class="w-100" required>
+                        </div>
+                    </div>
+
+                    <div class="organization-details">
+                        <p class="mb-3"><b>Types of Organization:</b> <span class="field-mandotory">*</span></p>
+                        <input type="radio" id="for-profit-organization" name="organization"> <label
+                            for="for-profit-organization">for profit organization</label><br>
+                        <input type="radio" id="Non-Profit-Organization" name="organization"> <label
+                            for="Non-Profit-Organization">Non-Profit Organization</label><br>
+                        <input type="radio" id="Member-Driven-Association" name="organization"> <label
+                            for="Member-Driven-Association">Member-Driven Association</label><br>
+                        <input type="radio" id="Government-Entity" name="organization"> <label
+                            for="Government-Entity">Government Entity</label>
+
+                        <br>
+                        <br>
+                        <label class="mb-3"><b>Please Provide an Overview of Your Company or
+                                Organization</b></label><br>
+                        <textarea name="" id="textareaStyle"></textarea>
+                        <br>
+                        <br>
+                        <label class="mb-3"><b>Please Describe Your Target Audience and Geographic Market(s). Please be
+                                as Detailed as Possible (i.e. age, profession, education level, gender, knowledge about
+                                your products or services, etc.)</b></label><br>
+                        <textarea name="" id="textareaStyle"></textarea>
+                        <br>
+                        <br>
+                        <label class="mb-3"><b>Please Describe Your Current Marketing Program (i.e. how your company
+                                generates new business)</b></label><br>
+                        <textarea name="" id="textareaStyle"></textarea>
+                    </div>
+
+                    <div class="website-detail mt-5">
+                        <h4 class="heading-website-design">Website Design & Development Info</h4>
+                        <br>
+                        <br>
+                        <p>Will this be a New Website or Redesign of an Existing Website?<span
+                                class="field-mandotary">*</span></p>
+                        <input type="radio" name="website" id="new-website-content"> <label for="new-website">New
+                            Website</label><br>
+                        <input type="radio" name="website" id="redesign-content"> <label
+                            for="redesign-website">redesign-website</label>
+                        <br>
+                        <br>
+                        <div id="new-website">
+                            <label for="What is the Domain Name / Website Address of the Current Site?"
+                                class="mb-3"><b>Are You Interested in Transferring to a New Web Hosting
+                                    Company?</b></label><br>
+                            <input type="radio" name="select" class="mb-2">
+                            <br>
+                            <input type="radio" name="select">
+                            <br>
+                            <label for="What is the Domain Name / Website Address of the Current Site?"
+                                class="mb-3 mt-3"><b>Are You Interested in Transferring to a New Web Hosting
+                                    Company?</b></label><br>
+                            <input type="radio" name="select" class="mb-2">
+                            <br>
+                            <input type="radio" name="select">
+                            <br>
+                        </div>
+                        <div id="redesign">
+                            <label for="What is the Domain Name / Website Address of the Current Site?"
+                                class="mb-3"><b>What is the
+                                    Domain Name / Website Address of the Current Site?</b></label><br>
+                            <input type="text" class="w-100 mb-3">
+                            <label for="What is the Domain Name / Website Address of the Current Site?"
+                                class="mb-3"><b>What is the
+                                    Domain Name / Website Address of the Current Site?</b></label><br>
+                            <input type="text" class="w-100 mb-3">
+                            <br>
+                            <label for="What is the Domain Name / Website Address of the Current Site?"
+                                class="mb-3"><b>Are You Interested in Transferring to a New Web Hosting
+                                    Company?</b></label><br>
+                            <input type="radio" name="select" class="mb-2">
+                            <br>
+                            <input type="radio" name="select">
+                            <br>
+                            <label for="What is the Purpose / Main Objective(s) of the New Website?"
+                                class="mb-3 mt-3"><b>What is the Purpose / Main Objective(s) of the New
+                                    Website?</b></label><br>
+                            <textarea name="" id="textareaStyle"></textarea>
+                        </div>
+                        <br>
+                        <label for="What is the Purpose / Main Objective(s) of the New Website?" class="mb-3">What is
+                            the Purpose / Main Objective(s) of the New Website?</label><br>
+                        <textarea name="" id="textareaStyle"></textarea>
+                    </div>
+
+
+                    <div class="website-content-detail mt-5">
+                        <h4 class="heading-content mb-4">Website Content</h4>
+
+                        <label for="Approximately How Many Pages will the New Website Initially Include?
+                        "><b>Approximately How Many Pages will the New Website Initially Include?</b>
+                        </label><br>
+                        <input type="text" class="w-50 mt-3 mb-3"><br>
+                        <label for="Please List the New Website's Sections & Pages:"><b>Please List the New Website's
+                                Sections & Pages:</b></label><br>
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <label for="Section Name"><b>Section Name</b></label><br>
+                                <input type="text" class="w-100 mt-3"><br>
+                            </div>
+                            <div class="col-md-8">
+                                <label for="Pages / Type of Content within this Section"><b>Pages / Type of Content
+                                        within this Section</b></label><br>
+                                <input type="text" class="w-100 mt-3">
+                            </div>
+                        </div>
+                        <br>
+                        <label for="Please Select Any Additional Web Pages or Features Needed on the New Website:"><b>Please
+                                Select Any Additional Web Pages or Features Needed on the New Website:</b></label><br>
+                        <div class="row mt-2">
+                            <div class="col-md-6 lineHeight">
+                                <input type="checkbox"> <label for="About (Us)">About (Us)</label><br>
+                                <input type="checkbox"> <label for="Areas We Specialize In">Areas We Specialize
+                                    In</label><br>
+                                <input type="checkbox"> <label for="Awards & Recognition">Awards &
+                                    Recognition</label><br>
+                                <input type="checkbox"> <label for="Community Involvement">Community
+                                    Involvement</label><br>
+                                <input type="checkbox"> <label for="Contact (Us)">Contact (Us)</label><br>
+                                <input type="checkbox"> <label for="Directions & Maps">Directions & Maps</label><br>
+                                <input type="checkbox"> <label for="Employment Info">Employment Info</label><br>
+                                <input type="checkbox"> <label for="FAQ Page">FAQ Page</label><br>
+                                <input type="checkbox"> <label for="Financing Info">Financing Info</label><br>
+                                <input type="checkbox"> <label for="Gift Cards">Gift Cards</label><br>
+                                <input type="checkbox"> <label for="Links & Resources">Links & Resources</label><br>
+                                <input type="checkbox"> <label for="Make a Donation">Make a Donation</label><br>
+                                <input type="checkbox"> <label for="Member">Member / Customer / Employee
+                                    Directory</label><br>
+                                <input type="checkbox"> <label for="Online">Other Online Form(s)</label><br>
+                                <input type="checkbox"> <label for="Gallery">Photo Gallery</label><br>
+                                <input type="checkbox"> <label for="Portfolio">Portfolio / Case Studies</label><br>
+                                <input type="checkbox"> <label for="Appointment">Schedule an Appointment
+                                    Form</label><br>
+                                <input type="checkbox"> <label for="Services">Services</label><br>
+                                <input type="checkbox"> <label for="Social-Media">Social Media Integration</label><br>
+                                <input type="checkbox"> <label for="Testimonial">Submit a Testimonial Form</label><br>
+                                <input type="checkbox"> <label for="Video">Video(s)</label><br>
+                                <input type="checkbox"> <label for="Why-Choose-Us">Why Choose Us?</label><br>
+                                <input type="checkbox"> <label for="Board-of-Directors">Board of Directors</label><br>
+
+                            </div>
+                            <div class="col-md-6 lineHeight">
+                                <input type="checkbox"> <label for="Affiliations">Affiliations (Associations, Brands,
+                                    Partners, Etc.)</label><br>
+                                <input type="checkbox"> <label for="Areas">Areas & Locations Served</label><br>
+                                <input type="checkbox"> <label for="Blog">Blog</label><br>
+                                <input type="checkbox"> <label for="Client-List">Client List</label><br>
+                                <input type="checkbox"> <label for="Company-News">Company News</label><br>
+                                <input type="checkbox"> <label for="Contact">Contact / Quote Request Form</label><br>
+                                <input type="checkbox"> <label for="Employees">Employee Bios / Staff
+                                    Profiles</label><br>
+                                <input type="checkbox"> <label for="Event-Calendar">Event Calendar</label><br>
+                                <input type="checkbox"> <label for="Featured Sponsors">Featured Sponsors</label><br>
+                                <input type="checkbox"> <label for="Forms-Page">Forms Page (with list of
+                                    PDFs)</label><br>
+                                <input type="checkbox"> <label for="Industry-News">Industry News</label><br>
+                                <input type="checkbox"> <label for="Locations">List of Locations</label><br>
+                                <input type="checkbox"> <label for="Payment">Make a Payment</label><br>
+                                <input type="checkbox"> <label for="Online-Forum">Online Forum</label><br>
+                                <input type="checkbox"> <label for="password">Password Protected Section</label><br>
+                                <input type="checkbox"> <label for="Price-List">Price List</label><br>
+                                <input type="checkbox"> <label for="Products">Products</label><br>
+                                <input type="checkbox"> <label for="Search-Form">Search Form</label><br>
+                                <input type="checkbox"> <label for="Site-Map">Site Map</label><br>
+                                <input type="checkbox"> <label for="deals">Specials / Deals</label><br>
+                                <input type="checkbox"> <label for="testimonial ">Testimonials / Reviews</label><br>
+                                <input type="checkbox"> <label for="Warranty-Info">Warranty Info</label><br>
+                            </div>
+                        </div>
+                        <p class="mt-4"><b>Other Features:</b></p>
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <label for="Section Name"><b>Features</b></label><br>
+                                <input type="text" class="w-100 mt-3"><br>
+                            </div>
+                            <div class="col-md-8">
+                                <label for="Pages / Type of Content within this Section"><b>Breif
+                                        Description</b></label><br>
+                                <input type="text" class="w-100 mt-3">
+                            </div>
+                        </div>
+                        <p class="mt-4"><b>Please Select Any Additional Services Needed:</b></p>
+                        <div class="additional-services-wrppr">
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <input type="checkbox" name="" id="duplicate"> <label
+                                        for="Duplicate-Website-Design">Duplicate Website Design & Dev.</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="checkbox" name="" id="ongoing"> <label
+                                        for="ongoing-Website-Design">Ongoing
+                                        Website Maintenance Services</label>
+                                </div>
+                            </div>
+
+                            <div id="duplicate-design" class="mb-4">
+                                <label for=""><b>Please Provide More Details about the Duplicate
+                                        Website(s)</b></label><br>
+                                <input type="text" class="w-100 mt-3">
+                            </div>
+                            <div id="ongoing-design">
+                                <label for=""><b>Please Provide a Description of the Ongoing Website Maintenance Needed
+                                        for this Website</b></label><br>
+                                <input type="text" class="w-100 mt-3">
+                            </div>
+                        </div>
+                        <p></p><b>Other Comments</b></p>
+                        <p class="mb-3">Please list any additional comments for the new website.</p>
+                        <textarea name="" id="textareaStyle"></textarea>
+                        <br>
+                        <p class="mb-2 mt-4"><b>Will Your Company or Organization be Providing the Content (Text) for
+                                the Website?</b></p>
+                        <div class="content-wrppr">
+                            <input type="radio" name="content" id="input-content-yes"> <label for="yes">Yes</label><br>
+                            <input type="radio" name="content" id="input-content-no"> <label for="no">No</label>
+
+                            <div id="content-yes" class="mt-3">
+                                <p><b>Would You Like Us to Provide a Quote for Copywriting Services?</b></p>
+                                <input type="radio" name="copywriting"> <label for="yes">Yes</label><br>
+                                <input type="radio" name="copywriting"> <label for="no">No</label>
+                            </div>
+                        </div>
+                        <p class="mt-4"><b>Will Your Company or Organization be Providing Images & Photos?</b></p>
+                        <input type="radio" name="images"> <label for="yes">Yes</label><br>
+                        <input type="radio" name="images"> <label for="no">No</label>
+                        <br>
+                        <p class="mt-4"><b>Please Describe the Types of Images You would Like to be Used in the Design
+                                of the New Website:</b></p>
+                        <textarea name="" id="textareaStyle"></textarea>
+                        <p class="mb-2 mt-4"><b>Will You Need Professional Photography Services?</b></p>
+                        <div class="photography-wrppr">
+                            <input type="radio" name="photography" id="input-photography-yes"> <label
+                                for="yes">Yes</label><br>
+                            <input type="radio" name="photography" id="input-photography-no"> <label for="no">No</label>
+
+                            <div id="photography-yes" class="mt-3">
+                                <p><b>Please Describe Your Photo Shoot Needs</b></p>
+                                <textarea name="" style="width: 100%; height: 5%;"></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="seo-info-wrppr mt-5">
+
+                        <h4 class="heading-seo my-4">Search Engine Optimization & Metric</h4>
+                        <p class="mt-4"><b>Please Provide the Main Keyword Phrases the Website Needs to be Optimized For
+                            </b></p>
+                        <textarea name="" id="textareaStyle"></textarea>
+                        <br>
+                        <p class="mt-4"><b>Please Provide the Geographic Areas the Website Needs to be Optimized For
+                            </b></p>
+                        <textarea name="" id="textareaStyle"></textarea>
+                        <br>
+                        <p class="mt-3"><b>What are the Main "Calls to Action" on the Site (Actions Visitors to the Site
+                                Should Take)?</b></p>
+                        <div class="row mb-5">
+                            <div class="col-md-6 lineHeight">
+                                <input type="checkbox" name="" id=""> <label for="call">Call</label><br>
+                                <input type="checkbox" name="" id=""> <label for="consultation">Request a Consultation,
+                                    Estimate or Quote</label><br>
+                                <input type="checkbox" name="" id=""> <label for="newsletter">Subscribe to an Email
+                                    Newsletter</label><br>
+                                <input type="checkbox" name="" id=""> <label for="demo">Request a Free Demo</label><br>
+                            </div>
+                            <div class="col-md-6 lineHeight">
+                                <input type="checkbox" name="" id=""> <label for="email">Email</label><br>
+                                <input type="checkbox" name="" id=""> <label for="Purchase-a-Product">Purchase a
+                                    Product</label><br>
+                                <input type="checkbox" name="" id=""> <label for="via-social-media">Connect Via
+                                    Facebook, Twitter, LinkedIn, Etc.</label><br>
+                            </div>
+                        </div>
+
+                        <p><b>Other "Call to Action"</b></p>
+                        <input type="text" style="width: 50%;">
+                        <br>
+                        <p class="mt-3"><b>Please Select the Metrics You Will Use to Track the Success of Your Website
+                                and Online
+                                Marketing</b></p>
+                        <div class="row">
+                            <div class="col-md-6 lineHeight">
+                                <input type="checkbox" name="" id=""> <label for="traffic-of-website">Growth of Traffic
+                                    to the Website</label><br>
+                                <input type="checkbox" name="" id=""> <label for="pages-viewed">Average Number of Pages
+                                    Viewed</label><br>
+                                <input type="checkbox" name="" id=""> <label for="incoming-phone-call">Incoming Phone
+                                    Calls</label><br>
+                                <input type="checkbox" name="" id=""> <label for="engagement">Social Media Connections &
+                                    Engagement</label><br>
+                                <input type="checkbox" name="" id=""> <label for="order-generated-online">Orders
+                                    Generated Online</label><br>
+                            </div>
+                            <div class="col-md-6 lineHeight">
+                                <input type="checkbox" name="" id=""> <label for="time-spent">Time Spent on the
+                                    Website</label><br>
+                                <input type="checkbox" name="" id=""> <label for="number-of-quote">Number of
+                                    Quote/Contact Req. Forms Received</label><br>
+                                <input type="checkbox" name="" id=""> <label for="email-sent-from-website">Emails Sent
+                                    from the Website</label><br>
+                                <input type="checkbox" name="" id=""> <label for="email-newsletter-subscribers">Growth
+                                    of Email Newsletter Subscribers</label><br>
+                            </div>
+                        </div>
+                        <p class="mt-3"><b>Other Metrics</b></p>
+                        <input type="text" style="width: 50%;">
+                    </div>
+
+                    <div class="competitor-info-wrppr my-5">
+                        <h4 class="heading-competitors">Competitors & Industry Leaders</h4>
+                        <p class="mt-3"><b>Please Provide a List of Your Company's Competitors & Their Websites:</b></p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="competitor"><b>Competitor</b></label><br>
+                                <input type="text" style="width: 100%; margin-top: 0.5em;">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="Website-URL"><b>Website URL</b></label><br>
+                                <input type="text" style="width: 100%; margin-top: 0.5em;">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="comments"><b>Comments</b></label><br>
+                                <input type="text" style="width: 100%; margin-top: 0.5em;">
+                            </div>
+                        </div>
+                        <p class="mt-3"><b>What Sets Your Company or Organization Apart from Its Competitors?
+                            </b></p>
+                        <textarea name="" id="textareaStyle"></textarea>
+                        <br>
+                        <p class="mt-3"><b>Please Provide a List of Industry Leaders & Their Websites:</b></p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="competitor"><b>Name</b></label><br>
+                                <input type="text" style="width: 100%; margin-top: 0.5em;">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="Website-URL"><b>Website URL</b></label><br>
+                                <input type="text" style="width: 100%; margin-top: 0.5em;">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="comments"><b>Comments</b></label><br>
+                                <input type="text" style="width: 100%; margin-top: 0.5em;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-media-info my-5">
+                        <h4 class="heading-social-media">Social Media & Email Marketing</h4>
+
+                        <p class="mt-4"><b>Does Your Company or Organization Utilize Social Media?</b></p>
+                        <div class="ultilize-social-media-wrppr">
+                            <input type="radio" name="social-media" id="btn-social-yes"> <label
+                                for="social-media-yes">Yes</label><br>
+                            <input type="radio" name="social-media" id="btn-social-no"> <label
+                                for="social-media-no">No</label><br>
+
+                            <div id="social-media-yes-wrppr" class="my-4">
+                                <p><b>What are the URLs for the Social Media Sites?</b></p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="social-media-site"><b>Social Media Site</b></label><br>
+                                        <input type="text" style="width: 100%; margin-top: 0.5em;">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="url"><b>URL</b></label><br>
+                                        <input type="text" style="width: 100%; margin-top: 0.5em;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 lineHeight" id="social-media-no-wrppr">
+                                <p><b>Please Select the Social Media Sites Which You are Interested in Having a Presence
+                                        Set-up</b></p>
+                                <input type="checkbox" name="" id=""> <label for="Facebook">Facebook</label><br>
+                                <input type="checkbox" name="" id=""> <label for="Linkdin">Linkdin</label><br>
+                                <input type="checkbox" name="" id=""> <label for="twitter">Twitter</label><br>
+                                <input type="checkbox" name="" id=""> <label for="google+">Google+</label><br>
+                                <input type="checkbox" name="" id=""> <label for="pinterest">Pinterest</label><br>
+                                <input type="checkbox" name="" id=""> <label for="youtube">Youtube</label><br>
+                            </div>
+                        </div>
+                        <p class="my-4"><b>Does Your Company Utilize Email Marketing to Stay in Front of Potential &
+                                Existing Customers?</b></p>
+                        <input type="radio" name="existing-customer"> <label for="">Yes</label><br>
+                        <input type="radio" name="existing-customer"> <label for="">No</label><br>
+
+                        <p class="my-4"><b>Would You Like to Utilize Email Marketing and Have an Email Newsletter
+                                Template Set-up with a Similar Look & Feel as Your New Website?</b></p>
+                        <input type="radio" name="email-marketing"> <label for="">Yes</label><br>
+                        <input type="radio" name="email-marketing"> <label for="">No</label><br>
+                    </div>
+
+                    <div class="branding-design-info">
+                        <h4 class="heading-branding-design">Branding & Design Direction</h4>
+                        <p class="my-4"><b>Do you Have Current Marketing & Printed Materials the Website's Design Needs
+                                to Match?</b></p>
+                        <div class="current-marketing-wrrpr">
+                            <input type="radio" name="current-marketing" id="current-marketing-yes"> <label
+                                for="">Yes</label><br>
+                            <input type="radio" name="current-marketing" id="current-marketing-no"> <label
+                                for="">No</label>
+
+                            <div class="my-4" id="current-marketing-yes-wrrpr">
+                                <p><b>Please Describe</b></p>
+                                <textarea name="" style="width: 100%; height: 4%;"></textarea>
+                                <p class="my-4"><b>Please Upload a Sample of the Marketing / Printed Materials</b></p>
+                                <div class="bg-light justify-content-center"
+                                    style="width: 100%; height: 4%; border: 1px solid;">
+                                    <div class="section-upload text-center py-5">
+                                        <p>Drop files here or</p>
+                                        <input type="file" id="upload" hidden />
+                                        <label for="upload" class="select-file">Select file</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="my-4"><b>Does Your Company or Organization Have a Logo?</b></p>
+                        <div class="company-logo-wrrpr">
+                            <input type="radio" name="company-logo" id="company-logo-yes"> <label for="">Yes</label><br>
+                            <input type="radio" name="company-logo" id="company-logo-no"> <label for="">No</label>
+
+                            <div class="my-4" id="company-logo-yes-wrrpr">
+                                <p class="my-4"><b>Please Upload an Electronic Version of Your Company or Organization's
+                                        Logo</b></p>
+                                <div class="bg-light justify-content-center"
+                                    style="width: 100%; height: 4%; border: 1px solid;">
+                                    <div class="section-upload text-center py-5">
+                                        <p>Drop files here or</p>
+                                        <input type="file" id="upload" hidden />
+                                        <label for="upload" class="select-file">Select file</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="my-4"><b>Please Provide a List of at Least 3-5 Websites You Like or Dislike:</b></p>
+                        <div class="row">
+                            <div class="col-md-6 lineHeight">
+                                <label for="branding-website-url"><b>Website URL</b></label><br>
+                                <input type="text" style="width: 100%; margin-top: 0.5em;">
+                            </div>
+                            <div class="col-md-6 lineHeight">
+                                <label for="likes-about-site"><b>What Do You Like / Dislike About this Site?
+                                    </b></label><br>
+                                <input type="text" style="width: 100%; margin-top: 0.5em;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="other-info-wrppr my-5">
+                        <h4 class="heading-other-info">Other Info</h4>
+
+                        <p class="py-3"><b>What is Your Timeline for this Project?</b></p>
+                        <input type="text" style="width: 50%;"><br>
+                        <p class="py-3"><b>What is Your Timeline for this Project?</b></p>
+                        <input type="text" style="width: 50%;"><br>
+                        <p class="py-3"><b>What is Your Timeline for this Project?</b></p>
+                        <input type="texarea" style="width: 100%; height: 3%;">
+
+                        <input type="button" value="Submit" class="my-5 btn-submit">
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script type="text/javascript">
+
+    $('document').ready(function () {
+        $('#redesign-content').click(function () {
+            $('#redesign').show();
+            $('#new-website').hide();
+        });
+        $('#new-website-content').click(function () {
+            $('#new-website').show();
+            $('#new-website').addClass('trasition');
+            $('#redesign').hide();
+        });
+        $('#btn-social-yes').click(function () {
+            $('#social-media-yes-wrppr').show();
+            $('#social-media-no-wrppr').hide();
+        });
+        $('#btn-social-no').click(function () {
+            $('#social-media-no-wrppr').show();
+            $('#social-media-yes-wrppr').hide();
+        });
+
+        $('input#ongoing').change(function () {
+            if ($(this).is(':checked')) $('#ongoing-design').show();
+            else $('#ongoing-design').hide();
+        }).change();
+        $('input#duplicate').change(function () {
+            if ($(this).is(':checked')) $('#duplicate-design').show();
+            else $('#duplicate-design').hide();
+        }).change();
+        $('input[type="radio"]').click(function () {
+            if ($(this).attr('id') === 'input-photography-yes') {
+                $('#photography-yes').show();
+            }
+
+            else if ($(this).attr('id') === 'input-photography-no') {
+                $('#photography-yes').hide();
+            }
+        });
+        $('input[type="radio"]').click(function () {
+            if ($(this).attr('id') === 'input-content-no') {
+                $('#content-yes').show();
+            }
+
+            else if ($(this).attr('id') === 'input-content-yes') {
+                $('#content-yes').hide();
+            }
+        });
+        $('input[type="radio"]').click(function () {
+            if ($(this).attr('id') === 'current-marketing-yes') {
+                $('#current-marketing-yes-wrrpr').show();
+            }
+
+            else if ($(this).attr('id') === 'current-marketing-no') {
+                $('#current-marketing-yes-wrrpr').hide();
+            }
+        });
+        $('input[type="radio"]').click(function () {
+            if ($(this).attr('id') === 'company-logo-yes') {
+                $('#company-logo-yes-wrrpr').show();
+            }
+
+            else if ($(this).attr('id') === 'company-logo-no') {
+                $('#company-logo-yes-wrrpr').hide();
+            }
+        });
+    });
+
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+    crossorigin="anonymous"></script>
+
+</html>
